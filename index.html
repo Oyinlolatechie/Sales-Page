@@ -56,7 +56,10 @@
                 </div>
     
                 <div class="col-md-5 d-none d-md-block">
-                    <img src="./images/ebook-cover.png" class="img-fluid" alt="cover book">
+                    <span class="tt"  data-bs-placement="bottom" title="eBook cover">
+                      <img src="./images/ebook-cover.png" class="img-fluid" alt="cover book">
+                    </span>
+                    
                 </div>
             </div>
         </div>
@@ -316,12 +319,80 @@
     </section>
 
         <!-- Form section -->
+    <section id="contact">
+      <div class="container-lg my-5">
+        <div class="text-center">
+          <h5>Get in Touch</h5>
+          <p class="lead text-muted">Questions to ask? Fill out the form to comtact me directly...</p>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form>
+              <label for="email" class="form-label">Email address: </label>
+              <div class="mb-2 input-group">
+                <div class="input-group-text">
+                  <span><i class="bi bi-at"></i></span>
+                </div>
+                <input type="email" class="form-control" id="email" placeholder="e.g oyinlolatechie@gmail.com">
+                <div class="input-group-text">
+                  <span class="tt" data-bs-placement="top" title="Enter your email"><i class="bi bi-question-circle"></i></span>
+                </div>
+              </div>
+              
+              <label for="name" class="form-label">Name:</label>
+              <div class="mb-2 input-group">
+                <div class="input-group-text">
+                  <span><i class="bi bi-person-fill"></i></span>
+                </div>
+                <input type="text" class="form-control" id="name" placeholder="e.g oyinlola">
+                <div class="input-group-text">
+                  <span class="tt" data-bs-placement="top" title="What's your name"><i class="bi bi-question-circle"></i></span>
+                </div>
+              </div>
+              
+              <label for="query" class="form-label">What's your question about?</label>
+              <div class="mb-4 input-group">
+                <div class="input-group-text">
+                  <span><i class="bi bi-question-square-fill"></i></span>
+                </div>
+                <select name="query" id="query" class="form-select">
+                  <option value="pricing" selected>Pricing query</option>
+                  <option value="content">Content query</option>
+                  <option value="Other">Other query</option>
+                </select>
+
+                <div class="input-group-text">
+                  <span class="tt" data-bs-placement="top" title="Select your query"><i class="bi bi-question-circle"></i></span>
+                </div>
+              </div>
+              
+              
+
+              <div class="form-floating my-4">
+                <textarea name="comment" class="form-control" id="comment" style="height: 140px"></textarea>
+                <label for="comment" >Your query...</label>
+              </div>
+              
+              <div class="text-center">
+                <a href="#" class="btn btn-secondary">Submit</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     
 
  <!--   Bootstrap Js file     -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-
+<script>
+  const toolTips = document.querySelectorAll('.tt')
+  toolTips.forEach(t => {
+    new bootstrap.Tooltip(t)
+  })
+</script>
 </body>
 </html>
